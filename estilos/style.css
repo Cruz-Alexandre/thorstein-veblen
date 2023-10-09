@@ -28,7 +28,7 @@ body {
 header {
     background-color: var(--cor0);
     color: white;
-    height: 200px;
+    min-height: 200px;
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -39,6 +39,7 @@ header h1 {
     padding: 5px;
     text-align: center;
     font-size: 4em;
+    font-weight: normal;
 }
 
 header h2 {
@@ -113,6 +114,10 @@ main a {
     color: black;
 }
 
+main a#externo::after {
+    content: '\00A0\1F517';
+}
+
 main a:hover {
     text-decoration: underline;
     color: black;
@@ -131,6 +136,12 @@ ul {
     list-style-type: '\2714\00A0\00A0';
 }
 
+img#veblen {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
 img#murillo {
     display: block;
     margin: auto;
@@ -139,6 +150,11 @@ img#murillo {
 img#fla {
     display: block;
     margin: auto;
+}
+
+p#baixar {
+    display: block;
+    text-align: center;
 }
 
 footer {
