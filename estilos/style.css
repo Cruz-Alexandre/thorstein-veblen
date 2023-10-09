@@ -1,33 +1,144 @@
 @charset "UTF-8";
 
-:roof {
-    --cor: 
+@font-face {
+    font-family: 'Patua One';
+    src: url('../fontes/PatuaOne-Regular.ttf') format('truetype');
 }
 
+:root {
+    --cor0: rgb(173, 47, 47);
+    --cor1: rgb(226, 162, 102);
+    --cor2: rgb(224, 189, 156);
+    
+    --fonte-texto: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-veblen: 'Patua One', cursive;
+}
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
 }
 
 body {
-    background-color: #AD2F2F;
+    background-color: var(--cor2);
+    font-family: var(--fonte-texto);
     
 }
 
 header {
-    background-color: lightcoral;
+    background-color: var(--cor0);
+    color: white;
+    height: 200px;
     padding: 10px;
     margin-bottom: 10px;
 }
 
+header h1 {
+    color: var(--cor1);
+    font-family: var(--fonte-veblen);
+    padding: 5px;
+    text-align: center;
+    font-size: 4em;
+}
+
+header h2 {
+    padding: 5px;
+    text-align: center;
+    font-size: 2em;
+}
+
+header h3 {
+    padding: 5px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+header p {
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
 nav {
-    background-color: lightcyan;
+    background-color: var(--cor0);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+    
+}
+
+nav > a {
+    color: white;
+    padding: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    
+}
+
+nav > a:hover {
+    background-color: var(--cor1);
+    border-radius: 10px;
+    
 }
 
 main {
-    background-color: bisque;
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h2 {
+    color: white;
+    font-weight: normal;
+    font-size: 1.8em;
+    padding: 10px;
+    background-image: linear-gradient(to right, var(--cor0), transparent);
+    text-indent: 8px;
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1.2em;
+}
+
+main a {
+    text-decoration: none;
+    color: black;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: black;
+    background-color: var(--cor1);
+    
+}
+
+ul {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1.2em;
+    list-style-position: inside;
+    columns: 1;
+    list-style-type: '\2714\00A0\00A0';
+}
+
+img#murillo {
+    display: block;
+    margin: auto;
+}
+
+img#fla {
+    display: block;
+    margin: auto;
 }
 
 footer {
@@ -39,6 +150,18 @@ footer {
     font-weight: bold;
 }
 
-a {
+footer > p > a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
 
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+a {
+    text-decoration: none;
+    
 }
